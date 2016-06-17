@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ISVideoEditViewController">
+            <connections>
+                <outlet property="mPlayBorderView" destination="swd-cf-tEg" id="stk-Uv-AU8"/>
+                <outlet property="mPlayButton" destination="FlL-5s-JxH" id="Zr0-aW-Nuc"/>
+                <outlet property="mPlayView" destination="PaK-DS-zi5" id="XQl-Us-Ndh"/>
+                <outlet property="mPlaybackView" destination="oXg-6i-wQo" id="Arn-1P-KMq"/>
+                <outlet property="mRestartButton" destination="hr1-wW-jJT" id="NcW-3A-jab"/>
+                <outlet property="mScrubber" destination="uwx-G0-kHb" id="BTl-9r-3eK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="PaK-DS-zi5">
+                    <rect key="frame" x="0.0" y="50" width="320" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" id="swd-cf-tEg">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" id="oXg-6i-wQo" customClass="ISVideoPlaybackView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hr1-wW-jJT">
+                            <rect key="frame" x="50" y="136" width="48" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="icon_gobegin.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="restartToggle:" destination="-1" eventType="touchUpInside" id="NC6-LX-Wnb"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FlL-5s-JxH">
+                            <rect key="frame" x="136" y="136" width="48" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="icon_play.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="playToggle:" destination="-1" eventType="touchUpInside" id="ssp-tV-BB2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="uwx-G0-kHb">
+                    <rect key="frame" x="0.0" y="370" width="320" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.91764705879999997" green="0.29803921570000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="trackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="140" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_gobegin.png" width="96" height="96"/>
+        <image name="icon_play.png" width="96" height="96"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
